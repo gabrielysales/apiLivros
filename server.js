@@ -5,9 +5,9 @@ const port = 3000;
 app.use(express.json());
 
 let livros = [
-    {id:1, nome:'O pequeno princípe'},
-    {id:2, nome:'Percy Jackson e o ladrão de raios'},
-    {id:3, nome:'As vantagens de ser invisível'}
+    {id:1, nome:'O pequeno princípe', preco: 25, ano: 1943 },
+    {id:2, nome:'Percy Jackson e o ladrão de raios', preco: 40, ano: 2005},
+    {id:3, nome:'As vantagens de ser invisível', preco: 30, ano: 1999}
 ];
 
 
@@ -30,8 +30,6 @@ app.get('/livros/:id', (req,res) =>{
     }
 })
 
-
-
 app.post(
     '/livros',
     (req,res) => {
@@ -50,7 +48,7 @@ app.post(
 app.put('/livros/:id', (req,res) =>{
     const id = parseInt(req.params.id);
     const nome  = req.body.nome
-    const livros = livros.find( p => p.id === id);
+    const livro = livros.find( p => p.id === id);
 
     if (livro){
         livro.nome = nome;
@@ -70,4 +68,16 @@ app.delete('/livros/:id', (req,res) =>{
     }else{
         res.status(404).json({erro:'Livro não encontrado'});
     }
+
 });
+
+//FALTA O FILTRO e agora vale 4 pontos
+
+app.get('/livros/quantidade', (req, res) => {
+    res.json({ quantidade: livros.length });
+});
+
+//primeiro
+//último
+//cadastro em lote
+//estatísticas
