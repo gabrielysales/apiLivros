@@ -13,7 +13,7 @@ let livros = [
 
 
 app.listen(3000, () =>{
-    console.log(`Servidor em execução: aTudo`)
+    console.log(`Servidor em execução: Débora e Gabriely`)
 });
 
 app.get('/livros', (req, res) => {
@@ -134,3 +134,4 @@ app.delete('/livros/:id', (req,res) =>{
         res.status(404).json({erro:'Livro não encontrado'});
     }
 });
+
