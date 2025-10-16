@@ -80,8 +80,9 @@ app.get('/livros/:id', (req,res) =>{
 app.post(
     '/livros',
     (req,res) => {
-        const nome = req.body.nome
-    
+        const nome = req.body.nome;
+         const ano = req.body.ano;
+      
     const novoLivro = {
         id : livros.length + 1,
         nome: nome,
@@ -135,6 +136,7 @@ app.delete('/livros/:id', (req,res) =>{
     }
 });
 
+
 /*addlivro*/
 /*{"nome": "Carmilla", "preco": 20, "ano": 1800}*/
 /*lote*/
@@ -146,4 +148,3 @@ app.delete('/livros/:id', (req,res) =>{
 
 /*deletar*/
 /*http://localhost:3000/livros/1*/
-
