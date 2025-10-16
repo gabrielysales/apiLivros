@@ -135,7 +135,8 @@ app.delete('/livros/:id', (req,res) =>{
     }
 });
 
-
+/*addlivro*/
+/*{"nome": "Carmilla", "preco": 20, "ano": 1800}*/
 /*lote*/
 /*[{"nome": "Taylor Swift", "preco": 30, "ano": 2025},
 {"nome": "Virginia", "preco": 50, "ano": 1908}]*/
@@ -145,3 +146,4 @@ app.delete('/livros/:id', (req,res) =>{
 
 /*deletar*/
 /*http://localhost:3000/livros/1*/
+
