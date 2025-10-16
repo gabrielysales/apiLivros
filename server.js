@@ -135,3 +135,13 @@ app.delete('/livros/:id', (req,res) =>{
     }
 });
 
+
+/*lote*/
+/*[{"nome": "Taylor Swift", "preco": 30, "ano": 2025},
+{"nome": "Virginia", "preco": 50, "ano": 1908}]*/
+
+/*atualizar*/
+/*{"nome": "Edição especial", "preco": 80, "ano": 2024}*/
+
+/*deletar*/
+/*http://localhost:3000/livros/1*/
